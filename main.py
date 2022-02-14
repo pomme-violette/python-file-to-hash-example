@@ -13,8 +13,7 @@ def algorithm_check(algorithm: str) -> bool:
     Examples:
         >>> algorithm_check('sha256')
     """
-    if algorithm in hashlib.algorithms_available:
-        return True
+    return algorithm in hashlib.algorithms_available
 
 def file_to_hash(algorithm, file_path: str) -> str:
     """
@@ -44,7 +43,6 @@ def compare(hash_1: str, hash_2: str) -> bool:
     Examples:
         >>> compare('a', 'b')
     """
-
     return hash_1 == hash_2
 
 def main():
